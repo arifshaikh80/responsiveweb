@@ -1,66 +1,111 @@
+/*Css reset*/
 *{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+    margin:0px;
+    padding:0px;
+    box-sizing: content-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
-.container{
-    height:100vh;
-    width:100%;
-    background-image:url("media.png");
-    background-size:cover;
-    background-position:center;
-    position:relative;
-}
-.navbar{
-    width:88%;
-    margin:auto;
-    padding:15px 0;
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image:linear-gradient(45 deg,purple, black);
     display:flex;
     align-items:center;
-    justify-content: space-between;
+    justify-content:center;
 }
-.logo{
-    width:140px;
+.maindiv{
+    margin:4rem;
+    background:black;
+    padding:2rem;
+    border-radius:1rem;
+    box-shadow:2px 5px 20px purple;
+}
+.innerdiv h1{
+    margin:0.7rem,0.04rem;
+    color:rgb(207, 5, 207)
+}
+.innerdiv h1 img{
+    height:2rem;
+    margin-right:0.5rem;
+}
+.innerdiv p{
+	font-size: 1.2rem;
+    color: #969393;
+    margin-bottom: 1rem;
+
+}
+/*styling the each card*/
+.eachdiv
+{
+	display: inline-block;
+    width: 23.5%;
+    background:purple;
+    box-shadow: 1px 2px 10px #33333352;
+    padding: 1rem;
+    margin: 0.5rem 0.4%;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+/*card Hover State*/
+.eachdiv:hover
+{
+	transform: scale(1.03);
+	box-shadow: 2px 6px 10px #2f2f2f69;
+}
+/*styling the card images*/
+.eachdiv img
+{
+	width: 100%;
+	margin-bottom: 0.8rem;
+    border-radius: 1rem;
+}
+/*styling card title*/
+.eachdiv h3
+{
+	color: #E91E63;
+    margin-bottom: 0.5rem;
+}
+/*styling card description*/
+.eachdiv p
+{
+	font-size: 0.8rem;
+    color: #969696;
+    margin-bottom: 0;
+}
+footer{
+	  position: fixed;
+    color: white;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1rem;
     cursor:pointer;
 }
-.navbar ul li{
-    list-style:none;
-    display:inline-block;
-    margin:0 15px;
+
+/*Media Query Part 
+For responsiveness of the website*/
+
+/*Under 1000px styling
+For medium screen devices*/
+@media only screen and (max-width: 1000px){
+	.maindiv {
+    	margin: 3rem;
+	}
+	.eachdiv
+	{
+    	width: 48%;
+    }
 }
-.navbar ul li a{
-    text-decoration: none; 
-    color: #5f5f5f;
-    font-size:15px;
-}
-.content{
-    width:100%;
-    position:absolute;
-    top:30%;
-}
-.left-col{
-    margin-left:6%;
-}
-.left-col h1{
-    font-size:90px;
-    color: #fff;
-    line-height:110px;
-    float:left;
-}
-.right-col{
-    float:right;
-    margin-right:6px;
-    margin-top:120px;
-    display:flex;
-    align-items:center;
-}
-.right-col p{
-    font-size:18px;
-    color:#5f5f5f;
-    font-weight:400;
-    margin-right:15px;
-}
-#icon{
-    width:80px;
-    cursor:pointer;
+
+/*Under 600px styling 
+For small devices*/
+@media only screen and (max-width: 600px){
+	.maindiv {
+    	margin: 2rem;
+	}
+	.eachdiv
+	{
+    	width: 100%;
+    	margin: 0.5rem 0;
+    }
 }
